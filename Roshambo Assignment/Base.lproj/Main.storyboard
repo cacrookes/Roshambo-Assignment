@@ -61,9 +61,33 @@
                     <view key="view" contentMode="scaleToFill" id="yA9-7S-JQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="si7-94-7gO">
+                                <rect key="frame" x="87" y="366" width="240" height="164.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-gY-NXm">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfy-1J-Sk7">
+                                        <rect key="frame" x="0.0" y="144" width="240" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="si7-94-7gO" firstAttribute="centerX" secondItem="yA9-7S-JQw" secondAttribute="centerX" id="bip-aM-kfy"/>
+                            <constraint firstItem="si7-94-7gO" firstAttribute="centerY" secondItem="yA9-7S-JQw" secondAttribute="centerY" id="wa1-Rw-1fn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TUp-v4-wsz"/>
                     </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="vFG-gY-NXm" id="NZk-5X-7HP"/>
+                        <outlet property="resultLabel" destination="Gfy-1J-Sk7" id="Ura-va-o38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmT-nz-c6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

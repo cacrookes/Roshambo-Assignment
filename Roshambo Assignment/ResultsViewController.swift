@@ -13,11 +13,18 @@ class ResultsViewController: UIViewController {
     var resultImage: UIImage?
     var resultMessage: String?
     
+    
+    @IBOutlet weak var resultImageView: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        resultImageView.image = resultImage
+        resultLabel.text = resultMessage
     }
+    
+    
     
 
     /*

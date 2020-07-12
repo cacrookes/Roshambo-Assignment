@@ -11,7 +11,6 @@ import UIKit
 class ChooseGestureViewController: UIViewController {
 
     
-    
     enum Hand: Int {
         case rock = 0, paper, scissors
     }
@@ -27,6 +26,8 @@ class ChooseGestureViewController: UIViewController {
         let controller: ResultsViewController
         
         controller = storyboard?.instantiateViewController(identifier: "ResultsViewController") as! ResultsViewController
+        
+        (controller.resultMessage, controller.resultImage) = getGameResults(playerMove: .rock, opponentMove: generateOpponentPlay())
         
         present(controller, animated: true, completion: nil)
     }
