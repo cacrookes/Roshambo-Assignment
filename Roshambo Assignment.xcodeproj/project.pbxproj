@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		330432AD24BACE22008072AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330432AC24BACE22008072AA /* AppDelegate.swift */; };
 		330432AF24BACE22008072AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330432AE24BACE22008072AA /* SceneDelegate.swift */; };
-		330432B124BACE22008072AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330432B024BACE22008072AA /* ViewController.swift */; };
+		330432B124BACE22008072AA /* ChooseGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330432B024BACE22008072AA /* ChooseGestureViewController.swift */; };
 		330432B424BACE22008072AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330432B224BACE22008072AA /* Main.storyboard */; };
 		330432B624BACE23008072AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330432B524BACE23008072AA /* Assets.xcassets */; };
 		330432B924BACE23008072AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330432B724BACE23008072AA /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		330432A924BACE22008072AA /* Roshambo Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roshambo Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		330432AC24BACE22008072AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		330432AE24BACE22008072AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		330432B024BACE22008072AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		330432B024BACE22008072AA /* ChooseGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGestureViewController.swift; sourceTree = "<group>"; };
 		330432B324BACE22008072AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		330432B524BACE23008072AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330432B824BACE23008072AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				330432AC24BACE22008072AA /* AppDelegate.swift */,
 				330432AE24BACE22008072AA /* SceneDelegate.swift */,
-				330432B024BACE22008072AA /* ViewController.swift */,
+				330432B024BACE22008072AA /* ChooseGestureViewController.swift */,
 				330432B224BACE22008072AA /* Main.storyboard */,
 				330432B524BACE23008072AA /* Assets.xcassets */,
 				330432B724BACE23008072AA /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				330432B124BACE22008072AA /* ViewController.swift in Sources */,
+				330432B124BACE22008072AA /* ChooseGestureViewController.swift in Sources */,
 				330432AD24BACE22008072AA /* AppDelegate.swift in Sources */,
 				330432AF24BACE22008072AA /* SceneDelegate.swift in Sources */,
 			);
