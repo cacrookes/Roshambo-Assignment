@@ -16,22 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eBc-Su-xMr">
-                                <rect key="frame" x="142.5" y="294" width="129" height="308"/>
+                                <rect key="frame" x="168.5" y="294" width="77.5" height="308"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-8j-e0T">
-                                        <rect key="frame" x="0.0" y="0.0" width="129" height="65"/>
-                                        <state key="normal" title="Button" image="rock"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="65"/>
+                                        <state key="normal" image="rock"/>
+                                        <connections>
+                                            <action selector="rockButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPl-Le-Bwf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GX-rC-BjU">
-                                        <rect key="frame" x="0.0" y="81" width="129" height="65"/>
-                                        <state key="normal" title="Button" image="paper"/>
+                                        <rect key="frame" x="0.0" y="81" width="77.5" height="65"/>
+                                        <state key="normal" image="paper"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDW-uA-8f8">
-                                        <rect key="frame" x="0.0" y="162" width="129" height="65"/>
-                                        <state key="normal" title="Button" image="scissors"/>
+                                        <rect key="frame" x="0.0" y="162" width="77.5" height="65"/>
+                                        <state key="normal" image="scissors"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-Lj-xyi">
-                                        <rect key="frame" x="0.0" y="243" width="129" height="65"/>
+                                        <rect key="frame" x="0.0" y="243" width="77.5" height="65"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -54,7 +57,7 @@
         <!--Results View Controller-->
         <scene sceneID="F9b-vD-ZWH">
             <objects>
-                <viewController id="you-bP-qaj" customClass="ResultsViewController" customModule="Roshambo_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" id="you-bP-qaj" customClass="ResultsViewController" customModule="Roshambo_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yA9-7S-JQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

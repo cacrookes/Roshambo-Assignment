@@ -10,6 +10,9 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    var resultImage: UIImage?
+    var resultMessage: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

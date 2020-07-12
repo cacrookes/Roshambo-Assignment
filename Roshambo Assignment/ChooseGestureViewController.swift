@@ -10,18 +10,29 @@ import UIKit
 
 class ChooseGestureViewController: UIViewController {
 
+    
+    
     enum Hand: Int {
         case rock = 0, paper, scissors
     }
-    
-    enum GameResults {
-        case win, lose, tie
-    }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+    // MARK: - Button Actions
+    
+    @IBAction func rockButtonClick(_ sender: Any) {
+        let controller: ResultsViewController
+        
+        controller = storyboard?.instantiateViewController(identifier: "ResultsViewController") as! ResultsViewController
+        
+        present(controller, animated: true, completion: nil)
+    }
+    
+    // MARK: - Game Logic
+    
 
     /// Randomly generates an iteger from 0 to 2 to represent the opponents move, and returns the associated hand.
     /// - Returns: the opponents hand, either rock, paper, or scissors
@@ -33,28 +44,49 @@ class ChooseGestureViewController: UIViewController {
     /// - Parameters:
     ///   - playerMove: Hand type that represents the players move, either rock, paper, or scissors
     ///   - opponentMove: Hand type that represents the opponents move, either rock, paper, or scissors
-    /// - Returns: the results of the game, either win, lose, or tie.
-    func getGameResults(playerMove: Hand, opponentMove: Hand) -> GameResults {
+    /// - Returns: a String, UIImage tuple that represent the results of the game.
+    func getGameResults(playerMove: Hand, opponentMove: Hand) -> (String, UIImage) {
+        var resultImage: UIImage
+        var resultString: String
         switch playerMove {
         case .rock:
             switch opponentMove{
-            case .rock: return GameResults.tie
-            case .paper: return GameResults.lose
-            case .scissors: return GameResults.win
+            case .rock:
+                resultImage = #imageLiteral(resourceName: "itsATie")
+                resultString = "It's a tie! You both picked rock."
+            case .paper:
+                resultImage = #imageLiteral(resourceName: "PaperCoversRock")
+                resultString = "You lose! Paper covers rock."
+            case .scissors:
+                resultImage = #imageLiteral(resourceName: "RockCrushesScissors")
+                resultString = "You win! Rock crushes scissors."
             }
         case .paper:
             switch opponentMove{
-            case .rock: return GameResults.win
-            case .paper: return GameResults.tie
-            case .scissors: return GameResults.lose
+            case .rock:
+                resultImage = #imageLiteral(resourceName: "PaperCoversRock")
+                resultString = "You win! Paper covers rock"
+            case .paper:
+                resultImage = #imageLiteral(resourceName: "itsATie")
+                resultString = "It's a tie! You both picked paper."
+            case .scissors:
+                resultImage = #imageLiteral(resourceName: "ScissorsCutPaper")
+                resultString = "You lose! Scissors cuts paper."
             }
         case .scissors:
             switch opponentMove{
-            case .rock: return GameResults.lose
-            case .paper: return GameResults.win
-            case .scissors: return GameResults.tie
+            case .rock:
+                resultImage = #imageLiteral(resourceName: "RockCrushesScissors")
+                resultString = "You lose! Rock crushes scissors."
+            case .paper:
+                resultImage = #imageLiteral(resourceName: "ScissorsCutPaper")
+                resultString = "You win! Scissors cuts paper."
+            case .scissors:
+                resultImage = #imageLiteral(resourceName: "itsATie")
+                resultString = "It's a tie! You both picked scissors."
             }
         }
+        return (resultString, resultImage)
     }
         
 }
