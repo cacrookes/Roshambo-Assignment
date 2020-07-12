@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDW-uA-8f8">
                                         <rect key="frame" x="0.0" y="162" width="77.5" height="65"/>
                                         <state key="normal" image="scissors"/>
+                                        <connections>
+                                            <segue destination="you-bP-qaj" kind="presentation" identifier="scissorClickSegue" id="TUt-ej-xXq"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-Lj-xyi">
                                         <rect key="frame" x="0.0" y="243" width="77.5" height="65"/>
@@ -100,6 +103,9 @@
             <point key="canvasLocation" x="946" y="137"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TUt-ej-xXq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>

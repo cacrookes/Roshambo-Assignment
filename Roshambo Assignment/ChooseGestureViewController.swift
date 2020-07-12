@@ -45,6 +45,9 @@ class ChooseGestureViewController: UIViewController {
         if segue.identifier == "paperClickSegue" {
             let controller = segue.destination as! ResultsViewController
             (controller.resultMessage, controller.resultImage) = getGameResults(playerMove: .paper, opponentMove: generateOpponentPlay())
+        } else if segue.identifier == "scissorClickSegue" {
+            let controller = segue.destination as! ResultsViewController
+            (controller.resultMessage, controller.resultImage) = getGameResults(playerMove: .scissors, opponentMove: generateOpponentPlay())
         }
     }
     
