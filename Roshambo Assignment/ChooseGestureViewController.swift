@@ -14,6 +14,10 @@ class ChooseGestureViewController: UIViewController {
         case rock = 0, paper, scissors
     }
     
+    enum GameResults {
+        case win, lose, tie
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,21 +29,33 @@ class ChooseGestureViewController: UIViewController {
         return Hand(rawValue: Int.random(in: 0...2))!
     }
     
-    /// Checks if the player beat the opponent.
+    /// Returns the results of the game.
     /// - Parameters:
     ///   - playerMove: Hand type that represents the players move, either rock, paper, or scissors
     ///   - opponentMove: Hand type that represents the opponents move, either rock, paper, or scissors
-    /// - Returns: Bool, indicating if the player won or not. Ties and losses are returned as false.
-    func didPlayerWin(playerMove: Hand, opponentMove: Hand) -> Bool {
+    /// - Returns: the results of the game, either win, lose, or tie.
+    func getGameResults(playerMove: Hand, opponentMove: Hand) -> GameResults {
         switch playerMove {
         case .rock:
-            return opponentMove == Hand.scissors ? true : false
+            switch opponentMove{
+            case .rock: return GameResults.tie
+            case .paper: return GameResults.lose
+            case .scissors: return GameResults.win
+            }
         case .paper:
-            return opponentMove == Hand.rock ? true : false
+            switch opponentMove{
+            case .rock: return GameResults.win
+            case .paper: return GameResults.tie
+            case .scissors: return GameResults.lose
+            }
         case .scissors:
-            return opponentMove == Hand.paper ? true : false
+            switch opponentMove{
+            case .rock: return GameResults.lose
+            case .paper: return GameResults.win
+            case .scissors: return GameResults.tie
+            }
         }
     }
-    
+        
 }
 
