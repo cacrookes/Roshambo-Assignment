@@ -28,6 +28,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GX-rC-BjU">
                                         <rect key="frame" x="0.0" y="81" width="77.5" height="65"/>
                                         <state key="normal" image="paper"/>
+                                        <connections>
+                                            <action selector="paperButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6h-72-ZJ9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDW-uA-8f8">
                                         <rect key="frame" x="0.0" y="162" width="77.5" height="65"/>
@@ -49,6 +52,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="you-bP-qaj" kind="presentation" identifier="paperClickSegue" id="2GP-PF-A1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,11 +65,11 @@
             <objects>
                 <viewController storyboardIdentifier="ResultsViewController" id="you-bP-qaj" customClass="ResultsViewController" customModule="Roshambo_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yA9-7S-JQw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="si7-94-7gO">
-                                <rect key="frame" x="87" y="366" width="240" height="164.5"/>
+                                <rect key="frame" x="87" y="339" width="240" height="164.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFG-gY-NXm">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>

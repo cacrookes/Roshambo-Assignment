@@ -22,6 +22,11 @@ class ChooseGestureViewController: UIViewController {
 
     // MARK: - Button Actions
     
+    // Each button click utilizes a different type of seque for practice.
+    // Clicking rock launches the ResultsViewController programmatically.
+    // Clicking paper programmatically launches a seque defined in the storyboard.
+    // Clicking scissors uses a seque completely defined in the storyboard.
+    
     @IBAction func rockButtonClick(_ sender: Any) {
         let controller: ResultsViewController
         
@@ -32,9 +37,19 @@ class ChooseGestureViewController: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
+    @IBAction func paperButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "paperClickSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "paperClickSegue" {
+            let controller = segue.destination as! ResultsViewController
+            (controller.resultMessage, controller.resultImage) = getGameResults(playerMove: .paper, opponentMove: generateOpponentPlay())
+        }
+    }
+    
     // MARK: - Game Logic
     
-
     /// Randomly generates an iteger from 0 to 2 to represent the opponents move, and returns the associated hand.
     /// - Returns: the opponents hand, either rock, paper, or scissors
     func generateOpponentPlay() -> Hand {
