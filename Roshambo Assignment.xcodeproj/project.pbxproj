@@ -43,6 +43,7 @@
 		330432A024BACE22008072AA = {
 			isa = PBXGroup;
 			children = (
+				333C269D2537CE3D002C9EB1 /* README.md */,
 				330432AB24BACE22008072AA /* Roshambo Assignment */,
 				330432AA24BACE22008072AA /* Products */,
 			);
@@ -67,7 +68,6 @@
 				330432B524BACE23008072AA /* Assets.xcassets */,
 				330432B724BACE23008072AA /* LaunchScreen.storyboard */,
 				330432BA24BACE23008072AA /* Info.plist */,
-				333C269D2537CE3D002C9EB1 /* README.md */,
 			);
 			path = "Roshambo Assignment";
 			sourceTree = "<group>";
