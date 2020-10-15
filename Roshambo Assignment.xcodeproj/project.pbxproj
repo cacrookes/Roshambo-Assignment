@@ -26,6 +26,7 @@
 		330432B824BACE23008072AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330432BA24BACE23008072AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		330432C024BAD2A8008072AA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		333C269D2537CE3D002C9EB1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				330432B524BACE23008072AA /* Assets.xcassets */,
 				330432B724BACE23008072AA /* LaunchScreen.storyboard */,
 				330432BA24BACE23008072AA /* Info.plist */,
+				333C269D2537CE3D002C9EB1 /* README.md */,
 			);
 			path = "Roshambo Assignment";
 			sourceTree = "<group>";
